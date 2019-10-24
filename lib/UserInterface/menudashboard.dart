@@ -10,7 +10,7 @@ class _MenuDashboardState extends State<MenuDashboard> {
   bool isCollapsed = true;
   double screenWidth ;
   double screenHeight;
-  final Duration duration = const Duration(milliseconds: 600);
+  final Duration duration = const Duration(milliseconds: 300);
 @override
 Widget build(BuildContext context) {
   Size size = MediaQuery.of(context).size;
@@ -100,10 +100,34 @@ Widget menu(context) {
               });
             },
             ),
-              Text("Hello Nagarrian", style: TextStyle(fontSize: 30, color: Colors.white)),
+              Text("Nagarro Romania", style: TextStyle(fontSize: 30, color: Colors.white)),
               Icon(Icons.airplanemode_active , color: Colors.white),
            ]
             ),
+            SizedBox(height: 45),
+            Container(
+              height: 200,
+              child: PageView(
+                controller: PageController(viewportFraction: 0.8),
+                children: <Widget>[
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 8),
+                    color: Colors.blueAccent,
+                    width: 100,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 8),
+                    color: Colors.amber,
+                    width: 100,
+                  ),
+                  Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 8),
+                    color: Colors.redAccent,
+                    width: 100,
+                  ),
+                ],
+              ),
+            )
           ],
 
         ),
