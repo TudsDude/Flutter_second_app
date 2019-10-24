@@ -20,7 +20,8 @@ class Home extends StatelessWidget {
       child: Text("Nagarro", textDirection: TextDirection.ltr,
       style: TextStyle(
         fontSize: 36.0,
-        color: Colors.white
+        color: Colors.white,
+        decoration: TextDecoration.none
       ) ,
       )
       )
